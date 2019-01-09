@@ -6,10 +6,10 @@
  * Time: 下午 4:29
  */
 @foreach (['danger','warning','success','info'] as $msg)
-    @if(session()-has($msg))
+    @if(session()->has($msg))
         <div class="flash-message">
             <p class="alert alert-{{ $msg }}">
-                {{ seeesion()->get($msg) }}
+                {{ session()->get($msg) }}
             </p>
         </div>
     @endif
